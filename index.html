@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Parshv Agro | Pure & Natural Amla Products</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Parshv Agro - 100% pure and natural amla-based products: Amla Juice, Amla Candy, Amla Mawa, Kokam Syrup. From farm to your home." />
+  <meta name="description"
+    content="Parshv Agro - 100% pure and natural amla-based products: Amla Juice, Amla Candy, Amla Mawa, Kokam Syrup. From farm to your home." />
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Bootstrap 5 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
   <!-- Bootstrap Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
   <style>
     :root {
@@ -33,6 +29,32 @@
       --accent-green-light: #e5f7eb;
       --dark-text: #1f2933;
       --muted-text: #6b7280;
+      --bg-color: #ffffff;
+      --bg-surface: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.96);
+      --border-color: rgba(148, 163, 184, 0.2);
+      --card-border: rgba(148, 163, 184, 0.3);
+      --title-color: #0b1220;
+    }
+
+    [data-theme="dark"] {
+      --primary-blue: #3b82f6;
+      --deep-blue: #60a5fa;
+      --soft-blue: #0f172a;
+      --accent-green: #4ade80;
+      --accent-green-light: #064e3b;
+      --dark-text: #f8fafc;
+      --muted-text: #94a3b8;
+      --bg-color: #121212;
+      --bg-surface: #1e1e1e;
+      --bg-glass: rgba(18, 18, 18, 0.96);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --card-border: rgba(255, 255, 255, 0.15);
+      --title-color: #ffffff;
+    }
+
+    [data-theme="dark"] .bg-white {
+      background-color: var(--bg-surface) !important;
     }
 
     * {
@@ -47,15 +69,17 @@
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
       color: var(--dark-text);
-      background-color: #ffffff;
+      background-color: var(--bg-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Navbar */
     .navbar {
       padding: 0.75rem 1rem;
-      background: rgba(255, 255, 255, 0.96);
+      background: var(--bg-glass);
       backdrop-filter: blur(6px);
       box-shadow: 0 1px 8px rgba(15, 23, 42, 0.08);
+      transition: background 0.3s ease;
     }
 
     .navbar-brand {
@@ -147,7 +171,7 @@
       min-height: 90vh;
       display: flex;
       align-items: center;
-      background: radial-gradient(circle at top left, #e3f4ff 0, #ffffff 40%, #e5f7eb 100%);
+      background: radial-gradient(circle at top left, var(--soft-blue) 0, var(--bg-color) 40%, var(--accent-green-light) 100%);
     }
 
     .hero-badge {
@@ -173,7 +197,7 @@
       font-size: clamp(2rem, 2.7rem + 0.8vw, 3.1rem);
       font-weight: 700;
       margin-bottom: 0.6rem;
-      color: #0b1220;
+      color: var(--title-color);
     }
 
     .hero-highlight {
@@ -230,18 +254,18 @@
     .btn-outline-custom {
       border-radius: 999px;
       font-weight: 500;
-      border-color: rgba(15, 23, 42, 0.14);
+      border-color: var(--border-color);
       color: var(--dark-text);
       padding-inline: 1.4rem;
       padding-block: 0.7rem;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(255, 255, 255, 0.8);
+      background: var(--bg-glass);
     }
 
     .btn-outline-custom:hover {
-      background: #ffffff;
+      background: var(--bg-surface);
       border-color: var(--primary-blue);
       color: var(--primary-blue);
     }
@@ -278,7 +302,7 @@
 
     .hero-main-pill {
       border-radius: 28px;
-      background: linear-gradient(135deg, #ffffff, #e7f3ff);
+      background: linear-gradient(135deg, var(--bg-surface), var(--soft-blue));
       padding: 1.6rem 1.4rem;
       box-shadow: 0 18px 50px rgba(15, 23, 42, 0.15);
       position: relative;
@@ -384,7 +408,7 @@
       transform: translateY(40%);
       padding: 0.6rem 0.85rem;
       border-radius: 16px;
-      background: #ffffff;
+      background: var(--bg-surface);
       box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
       font-size: 0.75rem;
       display: inline-flex;
@@ -410,14 +434,14 @@
 
     /* About */
     #about {
-      background-color: #ffffff;
+      background-color: var(--bg-color);
     }
 
     .about-card {
       border-radius: 20px;
-      border: 1px solid rgba(148, 163, 184, 0.2);
+      border: 1px solid var(--border-color);
       padding: 1.75rem 1.6rem;
-      background: radial-gradient(circle at top left, rgba(13, 110, 253, 0.02), #ffffff);
+      background: radial-gradient(circle at top left, rgba(13, 110, 253, 0.02), var(--bg-surface));
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.04);
     }
 
@@ -474,12 +498,12 @@
       border: none;
       border-radius: 18px;
       overflow: hidden;
-      background: #ffffff;
+      background: var(--bg-surface);
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
       transform: translateY(0);
       transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
         border-color 0.18s ease-out;
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      border: 1px solid var(--card-border);
       height: 100%;
     }
 
@@ -491,7 +515,7 @@
 
     .product-image-placeholder {
       height: 150px;
-      background: linear-gradient(135deg, #e5f7eb, #e0edff);
+      background: linear-gradient(135deg, var(--accent-green-light), var(--soft-blue));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -585,14 +609,14 @@
 
     /* Why Choose Us */
     #why {
-      background: #ffffff;
+      background: var(--bg-color);
     }
 
     .feature-card {
       border-radius: 18px;
       padding: 1.4rem 1.2rem;
-      background: linear-gradient(135deg, rgba(13, 110, 253, 0.02), #ffffff);
-      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: linear-gradient(135deg, rgba(13, 110, 253, 0.02), var(--bg-surface));
+      border: 1px solid var(--card-border);
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
       height: 100%;
       transition: transform 0.16s ease-out, box-shadow 0.16s ease-out,
@@ -637,9 +661,9 @@
 
     .contact-card {
       border-radius: 20px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      border: 1px solid var(--card-border);
       padding: 1.6rem 1.5rem;
-      background: #ffffff;
+      background: var(--bg-surface);
       box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
     }
 
@@ -740,12 +764,28 @@
       transform: translateY(-1px);
     }
 
+    /* Modal Theme Overrides */
+    .modal-content {
+      background-color: var(--bg-surface);
+      color: var(--dark-text);
+      border-color: var(--card-border);
+    }
+
+    .modal-header {
+      border-bottom-color: var(--border-color);
+    }
+
+    [data-theme="dark"] .btn-close {
+      filter: invert(1) grayscale(100%) brightness(200%);
+    }
+
     /* Small utilities */
     .shadow-soft {
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top">
@@ -754,15 +794,8 @@
         <img src="brand-badge.png" alt="Parshv Agro logo" class="brand-logo" />
         <span>Parshv Agro</span>
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navMenu"
-        aria-controls="navMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -822,6 +855,15 @@
             </a>
           </div>
 
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <button id="theme-light-btn" class="btn btn-sm btn-outline-custom rounded-pill">
+              <i class="bi bi-sun"></i> Light Theme
+            </button>
+            <button id="theme-dark-btn" class="btn btn-sm btn-outline-custom rounded-pill">
+              <i class="bi bi-moon"></i> Dark Theme
+            </button>
+          </div>
+
           <div class="hero-extra-note">
             <span></span>
             Naturally preserved goodness, bottled close to the source.
@@ -879,7 +921,8 @@
         <span class="badge-pill">About Parshv Agro</span>
         <h2 class="section-title">From Farm to Your Home</h2>
         <p class="section-subtitle">
-          We transform farm-fresh amla into delicious treats and refreshing drinks. Every product is designed to balance taste, nutrition, and purity—bringing nature closer to your everyday life.
+          We transform farm-fresh amla into delicious treats and refreshing drinks. Every product is designed to balance
+          taste, nutrition, and purity—bringing nature closer to your everyday life.
         </p>
       </div>
 
@@ -1056,11 +1099,8 @@
         </div>
         <div class="modal-body">
           <div class="text-center mb-3">
-            <img
-              src="product image/amla-juice2.jpg"
-              alt="Amla Juice bottle"
-              class="img-fluid rounded shadow-sm product-modal-img"
-            />
+            <img src="product image/amla-juice2.jpg" alt="Amla Juice bottle"
+              class="img-fluid rounded shadow-sm product-modal-img" />
           </div>
           <p>
             Amla Juice from Parshv Agro is a refreshing daily drink made from carefully selected
@@ -1069,8 +1109,10 @@
           </p>
           <ul class="list-unstyled small mb-0">
             <li><i class="bi bi-check-circle text-success me-1"></i> Supports daily immunity and overall wellness</li>
-            <li><i class="bi bi-check-circle text-success me-1"></i> Balanced taste that can be enjoyed with water or other mixes</li>
-            <li><i class="bi bi-check-circle text-success me-1"></i> No artificial colors, made with care in Maharashtra</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> Balanced taste that can be enjoyed with water or
+              other mixes</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> No artificial colors, made with care in Maharashtra
+            </li>
           </ul>
         </div>
       </div>
@@ -1086,11 +1128,8 @@
         </div>
         <div class="modal-body">
           <div class="text-center mb-3">
-            <img
-              src="product image/amla-candy2.jpg"
-              alt="Amla Candy"
-              class="img-fluid rounded shadow-sm product-modal-img"
-            />
+            <img src="product image/amla-candy2.jpg" alt="Amla Candy"
+              class="img-fluid rounded shadow-sm product-modal-img" />
           </div>
           <p>
             Parshv Agro Amla Candy offers the goodness of amla in convenient, bite-sized pieces,
@@ -1098,8 +1137,10 @@
             way to enjoy amla benefits during travel, at work, or as an after-meal delight.
           </p>
           <ul class="list-unstyled small mb-0">
-            <li><i class="bi bi-check-circle text-success me-1"></i> Two flavor options: classic sweet and tangy chatpata</li>
-            <li><i class="bi bi-check-circle text-success me-1"></i> Ideal for kids and adults who prefer chewable formats</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> Two flavor options: classic sweet and tangy
+              chatpata</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> Ideal for kids and adults who prefer chewable
+              formats</li>
             <li><i class="bi bi-check-circle text-success me-1"></i> Packed for freshness and easy sharing</li>
           </ul>
         </div>
@@ -1116,11 +1157,8 @@
         </div>
         <div class="modal-body">
           <div class="text-center mb-3">
-            <img
-              src="product image/amla-mawa2.jpg"
-              alt="Amla Mawa sweet"
-              class="img-fluid rounded shadow-sm product-modal-img"
-            />
+            <img src="product image/amla-mawa2.jpg" alt="Amla Mawa sweet"
+              class="img-fluid rounded shadow-sm product-modal-img" />
           </div>
           <p>
             Amla Mawa is a rich, traditional-style confection that blends the tartness of amla
@@ -1129,9 +1167,12 @@
             of amla.
           </p>
           <ul class="list-unstyled small mb-0">
-            <li><i class="bi bi-check-circle text-success me-1"></i> Suitable for festive occasions and special gifting</li>
-            <li><i class="bi bi-check-circle text-success me-1"></i> Combines traditional taste with the goodness of amla</li>
-            <li><i class="bi bi-check-circle text-success me-1"></i> Crafted in controlled batches for consistent quality</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> Suitable for festive occasions and special gifting
+            </li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> Combines traditional taste with the goodness of
+              amla</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> Crafted in controlled batches for consistent
+              quality</li>
           </ul>
         </div>
       </div>
@@ -1147,11 +1188,8 @@
         </div>
         <div class="modal-body">
           <div class="text-center mb-3">
-            <img
-              src="product image/kokam-syrup2.jpg"
-              alt="Kokam Syrup bottle"
-              class="img-fluid rounded shadow-sm product-modal-img"
-            />
+            <img src="product image/kokam-syrup2.jpg" alt="Kokam Syrup bottle"
+              class="img-fluid rounded shadow-sm product-modal-img" />
           </div>
           <p>
             Parshv Agro Kokam Syrup is a tangy-sweet concentrate crafted from kokam, known
@@ -1159,9 +1197,11 @@
             chilled water or soda to create refreshing beverages that help you beat the heat.
           </p>
           <ul class="list-unstyled small mb-0">
-            <li><i class="bi bi-check-circle text-success me-1"></i> Ideal for preparing quick, cooling summer drinks</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> Ideal for preparing quick, cooling summer drinks
+            </li>
             <li><i class="bi bi-check-circle text-success me-1"></i> Naturally tangy flavor with balanced sweetness</li>
-            <li><i class="bi bi-check-circle text-success me-1"></i> Great for family gatherings and home refreshment counters</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> Great for family gatherings and home refreshment
+              counters</li>
           </ul>
         </div>
       </div>
@@ -1255,7 +1295,7 @@
       </div>
 
       <div class="row g-4 justify-content-center">
-        
+
 
         <div class="col-lg-4">
           <div class="shadow-soft rounded-4 p-3 p-md-4 bg-white h-100">
@@ -1268,7 +1308,7 @@
               <div>
                 <div class="contact-info-label">Location</div>
                 <p class="contact-info-text mb-0">
-                    A/p. Vathar Naka, Peth Vadgaon Tal. Hatkanangle, Dis. Kolhapur-416112.
+                  A/p. Vathar Naka, Peth Vadgaon Tal. Hatkanangle, Dis. Kolhapur-416112.
                 </p>
               </div>
             </div>
@@ -1292,7 +1332,7 @@
               <div>
                 <div class="contact-info-label">Email</div>
                 <p class="contact-info-text mb-0">
-                    parshvagro18@gmail.ocm
+                  parshvagro18@gmail.ocm
                 </p>
               </div>
             </div>
@@ -1329,14 +1369,34 @@
   </footer>
 
   <!-- Bootstrap JS Bundle -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
 
   <!-- Small JS for smooth nav behavior & year -->
   <script>
+    // Theme Switcher Logic
+    const themeLightBtn = document.getElementById("theme-light-btn");
+    const themeDarkBtn = document.getElementById("theme-dark-btn");
+
+    if (themeLightBtn && themeDarkBtn) {
+      themeLightBtn.addEventListener("click", () => {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      });
+
+      themeDarkBtn.addEventListener("click", () => {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      });
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    }
+
     // Set current year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -1379,4 +1439,5 @@
     sections.forEach((section) => observer.observe(section));
   </script>
 </body>
+
 </html>
